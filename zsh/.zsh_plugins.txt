@@ -1,0 +1,21 @@
+# Static Loading
+# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+
+# Powerlevel10k Theme
+romkatv/powerlevel10k
+
+djui/alias-tips
+caarlos0/zsh-mkc
+wookayin/fzf-fasd
+marzocchi/zsh-notify
+
+# Completions
+sinetoami/antibody-completion
+akoenig/npm-run.plugin.zsh
+vasyharan/zsh-brew-services
+lukechilds/zsh-better-npm-completion
+
+robbyrussell/oh-my-zsh path:plugins/zsh_reload
+robbyrussell/oh-my-zsh path:plugins/fzf
+robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+robbyrussell/oh-my-zsh path:plugins/forklift

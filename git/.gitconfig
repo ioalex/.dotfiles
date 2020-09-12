@@ -2,6 +2,10 @@
 	name = Alex
 	email = alex@alexhe.io
 
+[alias]
+	# Show the user email for the current repository.
+	whoami = config user.email
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

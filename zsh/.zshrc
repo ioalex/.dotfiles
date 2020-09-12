@@ -1,10 +1,10 @@
 # Information
 # LAST UPDATED: 04/09/2020
 #
-# __________       .__                   
-# \____    /  _____|  |_________   ____  
-#   /     /  /  ___/  |  \_  __ \_/ ___\ 
-#  /     /_  \___ \|   Y  \  | \/\  \___ 
+# __________       .__
+# \____    /  _____|  |_________   ____
+#   /     /  /  ___/  |  \_  __ \_/ ___\
+#  /     /_  \___ \|   Y  \  | \/\  \___
 # /_______ \/____  >___|  /__|    \___  >
 #         \/     \/     \/            \/
 #
@@ -34,7 +34,7 @@ export LC_ALL=en_US.UTF-8
 
 # Oh-my-zsh
 # Moving on from oh-my-zsh as it slows down startup time (ᵟຶ︵ ᵟຶ)
-# I can completely remove the following lines, 
+# I can completely remove the following lines,
 # however I want to keep it here in the odd chance I move back to oh-my-zsh.
 
 # Path to your oh-my-zsh installation.
@@ -182,7 +182,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add Ruby Version Manager to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Tab Complete for Colorls
 source $(dirname $(gem which colorls))/tab_complete.sh
@@ -211,101 +211,42 @@ precmd() {
 }
 
 
-# Useful Exports 
+# Useful Exports
 export ZSH_CONFIG=$HOME/.zshrc
 export NVIM_PATH=$HOME/.config/nvim
 export TMUX_CONFIG=$HOME/.tmux.conf
 export DESKTOP=$HOME/Desktop
-export PROJECTS=$HOME/Desktop/Projects
-export WEBDEV=$HOME/Desktop/Projects/Web-Development
-
-# Aliases
-
-# Commonly Used
-alias please=sudo
-alias pls=sudo
-alias o="open"
-alias cat=bat
-alias rm=trash
-alias ls=colorls
-alias lc="colorls -lA --sd"
-alias reload="dbxcli put $HOME/.zshrc dotfiles/.zshrc && src"
-alias r=ranger
-alias rn=rename
-alias find=fd
-alias c=clear
-
-alias wifi=wifi-password
-alias dbx=dbxcli
-alias grep=ack
-alias pip=pip3
-alias wtf=apropos # list of commands apropos to the term you give it
-eval $(thefuck --alias fuck)
-eval $(thefuck --alias FUCK) # For Mondays!
-
-# Editors
-alias vim=nvim
-alias v=nvim
-alias n=nvim
-alias m=micro
-alias nano=micro # Use Micro in place of Nano
-
-# Tmux
-# alias t=tmux
-alias q=exit
-alias "treload"="tmux source $TMUX_CONFIG"
-alias t="tmux attach || tmux new-session\; split-window -h" # Attaches tmux to the last session; creates a new session (with a panel split into left and right) if none exists.
-alias tl="tmux list-sessions" # Lists all ongoing sessions
-alias tn="tmux new -s"
-alias ta="tmux attach -t"
-alias tk="tmux kill-session -t"
-
-# Git
-alias "git clone"="hub clone"
-
-# NPM
-alias "nom list -g"="npm list -g --depth 0"
-
-# NVM
-alias "nvm install latest"="nvm install node"
-
-# Commands
-alias help="source $HOME/.config/help/help.sh"
-alias keys="source $HOME/.config/rebindkeys/rebindkey.sh"
-alias todo="todoist list --filter 'today'"
-
-# Maintenance
-alias updatezsh="upgrade_oh_my_zsh"
-alias doctor="cleanmymac update && cleanmymac"
-alias plugins="antibody update && antibody bundle < $ANTIBODY_PLUGINS_TXT > $ANTIBODY_PLUGINS"
-
-# Configuration
-alias config="nvim $HOME/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias nvimconfig="nvim $HOME/.config/nvim"
-alias tmuxconf="nvim $HOME/.tmux.conf"
-
-# Directory Shortcuts
-alias projects="cd $PROJECTS"
-alias webdev="cd $WEBDEV"
+export PROJECTS=$HOME/Projects
+export WEBDEV=$HOME/Projects/Web-Development
 
 # Automatically start tmux if:
-# (1) tmux exists on the system, 
-# (2) we're in an interactive shell, and 
+# (1) tmux exists on the system,
+# (2) we're in an interactive shell, and
 # (3) we are not already in tux
 # Source: <https://cutt.ly/EfWTG2b>
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #   exec tmux
 # fi
 
-# Backup Neovim
-alias backupvim="echo 'Backing up Neovim configuration...'
-cp $HOME/.config/nvim/init.vim $HOME/Dropbox/dotfiles/nvim/ 
-cp $HOME/.config/nvim/coc-settings.json $HOME/Dropbox/dotfiles/nvim/
-cp -R $HOME/.config/nvim/core/ $HOME/Dropbox/dotfiles/nvim/core/ 
-cp -R $HOME/.config/nvim/lua/ $HOME/Dropbox/dotfiles/nvim/lua/ 
-cp -R $HOME/.config/nvim/plugins/ $HOME/Dropbox/dotfiles/nvim/plugins/ 
-cp -R $HOME/.config/nvim/themes/ $HOME/Dropbox/dotfiles/nvim/themes/
-echo 'Neovim configuration has been backed up to Dropbox.'"
+# Use coreutils without "g" pefix
+# Coreutils is a package of updated basic command line tools
+PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 
-# test
+# Use findutils without "g" pefix
+# Findutils is a package of basic directory searching utilities
+PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+
+# Use gnu-sed without "g" prefix
+# GNU-sed (stream editor) is a non-interactive command-line text editor
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# Use gnu-tar without "g" prefix
+# GNU-tar is another popular stream editor
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
+# Aliases
+if [ -f $HOME/.zsh/aliases ]; then
+    source $HOME/.zsh/aliases
+else
+    print "404: ~/.zsh/aliases not found."
+fi
