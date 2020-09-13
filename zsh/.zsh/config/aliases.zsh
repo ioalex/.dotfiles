@@ -6,6 +6,7 @@ alias pls=sudo
 alias o="open"
 alias cat=bat
 alias rm=trash
+alias mkdir="mkdir -pv"
 alias ls=colorls
 alias lc="colorls -lA --sd"
 alias reload="dbxcli put $HOME/.zshrc dotfiles/.zshrc && src"
@@ -14,14 +15,19 @@ alias rn=rename
 alias find=fd
 alias c=clear
 
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
 alias b=brew
+alias chrome=chrome-cli
 alias wifi=wifi-password
 alias dbx=dbxcli
-alias grep=rg
+alias grep=rg --color=auto
 alias pip=pip3
 alias wtf=apropos # list of commands apropos to the term you give it
 eval $(thefuck --alias fuck)
 eval $(thefuck --alias FUCK) # For Mondays!
+alias ll="last -1 $(whoami)"    # Prints the last login information - useful as .hushlogin completely suppresses the last login messages
 
 # Editors
 alias vim=nvim
@@ -42,9 +48,10 @@ alias tk="tmux kill-session -t"
 
 # Git
 alias "git clone"="hub clone"
+alias g=git
 
 # NPM
-alias "nom list -g"="npm list -g --depth 0"
+alias "npmg"="npm list -g --depth=0"
 
 # NVM
 alias "nvm install latest"="nvm install node"
