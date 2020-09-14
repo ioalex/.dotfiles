@@ -1,0 +1,8 @@
+etc
+\.git
+\.github
+\..gitignore
+
+README.*
+LICENSE
+.editorconfig

@@ -20,3 +20,4 @@ Thumbs.db
 # IDEs stuff
 .idea
 .rubymine_helpers
+.vscode

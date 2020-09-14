@@ -81,17 +81,6 @@ for file in $misc[@]; do
     fi
 done
 
-# Speed up zsh start time by lazy loading rbenv
- # shellcheck disable=SC2039
- if rbenv &>/dev/null; then
-  eval "$(rbenv init -)"
- fi
-
- rbenv() {
-  eval "$(command rbenv init -)"
-  rbenv "$@"
- }
-
 # Enable Homebrew's completions <docs.brew.sh/Shell-Completion>
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH

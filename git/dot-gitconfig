@@ -11,3 +11,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[core]
+	excludesfile = /Users/alexhe/.gitignore
+	attributesfile = /Users/alexhe/.gitattributes
