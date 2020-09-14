@@ -14,11 +14,8 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-# npm
-npm-debug.log
-
-# Yarn
-yarn-error.log
+# Log files
+*.log
 
 # IDEs stuff
 .idea
