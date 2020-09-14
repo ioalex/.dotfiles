@@ -11,9 +11,6 @@
 # Configuration file for .zshrc, be careful with this file!
 # Alex He <github.com/ioalex>
 
-# TODO: Modularise Configuration - Use the newly created ~/.zsh
-# TODO: Copy functions from oh-my-zsh.sh
-
 
 if [ -f $HOME/.zsh/config/path.zsh ]; then
     source $HOME/.zsh/config/path.zsh
