@@ -17,88 +17,173 @@ tap "sass/sass"
 tap "stqp/go-caniuse"
 tap "tcnksm/license"
 tap "universal-ctags/universal-ctags"
+# Search tool like grep, but optimized for programmers
 brew "ack"
+# Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Compiler for writing next generation JavaScript
 brew "babel"
+# Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Programmable completion for Bash 3.2
 brew "bash-completion"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-brew "python@3.8"
+# Emacs dependency management
 brew "cask"
+# Control Google Chrome from the command-line
 brew "chrome-cli"
+# JavaScript optimizing compiler
 brew "closure-compiler"
+# Dependency Manager for PHP
 brew "composer"
+# Contentful command-line tools
 brew "contentful-cli"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# CLI tool for quick access to files and directories
 brew "fasd"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Identify or delete duplicate files
 brew "fdupes"
+# Collection of GNU find, xargs, and locate
 brew "findutils"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# Distributed revision control system
 brew "git"
+# Git extension for versioning large files
 brew "git-lfs"
+# X.509 and CMS library
 brew "libksba"
+# GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Bash-tool to store the private data inside a git repo
 brew "git-secret"
+# GNU implementation of the famous stream editor
 brew "gnu-sed"
+# GNU version of the tar archiving utility
 brew "gnu-tar"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# GitHub Markdown previewer
 brew "grip"
+# Improved top (interactive process viewer)
 brew "htop"
+# Add GitHub support to git on the command-line
 brew "hub"
+# Configurable static site generator
 brew "hugo"
+# Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Keep your Mac's application settings in sync
 brew "mackup"
+# Mac App Store command-line interface
 brew "mas"
+# Modern and intuitive terminal-based text editor
 brew "micro"
+# Collection of tools that nobody wrote when UNIX was young
 brew "moreutils"
+# CLI for MySQL with auto-completion and syntax highlighting
 brew "mycli"
+# Free (GNU) replacement for the Pico text editor
 brew "nano"
+# NCurses Disk Usage
 brew "ncdu"
+# Fast, highly customisable system info script
 brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# General-purpose scripting language
 brew "php"
+# Python dependency management tool
 brew "pipenv"
+# Monitor data's progress through a pipe
 brew "pv"
+# File browser
 brew "ranger"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Prints a steam locomotive if you type sl instead of ls
 brew "sl"
+# Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
+# Spotify daemon
 brew "spotifyd"
+# The cross-shell prompt for astronauts
 brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Send macOS User Notifications from the command-line
 brew "terminal-notifier"
+# Code-search similar to ack
 brew "the_silver_searcher"
+# Programatically correct mistyped console commands
 brew "thefuck"
+# Terminal multiplexer
 brew "tmux"
+# Manage complex tmux sessions easily
 brew "tmuxinator"
+# Lightweight BitTorrent client
 brew "transmission-cli"
+# CLI tool that moves files or folder to the trash
 brew "trash"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Language for application scale JavaScript development
 brew "typescript"
+# Vi 'workalike' with many additional features
 brew "vim"
+# Command-line interface for VirusTotal
 brew "virustotal-cli"
+# Executes a program periodically, showing output fullscreen
 brew "watch"
+# Bundler for JavaScript and friends
 brew "webpack"
+# Internet file retriever
 brew "wget"
+# Show the current WiFi network password
 brew "wifi-password"
+# Yet Another Dotfiles Manager
 brew "yadm"
+# JavaScript package manager
 brew "yarn"
+# General-purpose lossless data-compression library
 brew "zlib"
+# UNIX shell (command interpreter)
 brew "zsh"
+# Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Additional completion definitions for zsh
 brew "zsh-completions"
+# Zsh curses-based tools, e.g. multi-word history searcher
 brew "zsh-navigation-tools"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Simplified and community-driven man pages (tldr-pages).
 brew "4d63/tldr/tldr"
+# The fastest shell plugin manager
 brew "getantibody/tap/antibody"
+# A command line client for Dropbox built using the Go SDK
 brew "idleberg/dbxcli/dbxcli"
+# A simple terminal UI for git commands, written in Go
 brew "jesseduffield/lazygit/lazygit"
+# A command line utility for renaming files
 brew "jhotmann/rename-cli/rename-cli"
+# Run GitHub Actions locally
 brew "nektos/tap/act"
+# A terminal user interface for Spotify
 brew "rigellute/tap/spotify-tui"
+# Todoist CLI client
 brew "sachaos/todoist/todoist"
+# Stylesheet Preprocessor
 brew "sass/sass/sass"
+# Maintained ctags implementation
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "1password"
 cask "1password-cli"
