@@ -1,6 +1,6 @@
 # Saucy Dotfiles
 
-This is a repository for my personal dotfiles, aka the source-iest (sorry) dotfiles in town. You've been warned, there's a whole lotta' sourcing in this repo!
+This is a repository for my personal dotfiles, aka the source-iest dotfiles in town (sorry). You've been warned, there's a whole lotta' sourcing in this repo!
 
 I created this repo to make it easier for myself to setup a fresh new MacOS computer in the event I win the lottery.
 
@@ -12,6 +12,6 @@ The magic behind these dotfiles is GNU Stow, a symlink farm manager. With Stow, 
 
 To Git Clone this folder:
 
-```
+```shellscript
 git -C $HOME clone https://github.com/ioalex/dotfiles.git .dotfiles
 ```
