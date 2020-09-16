@@ -2,6 +2,10 @@
 *.cache
 Thumbs.db
 *.log
+
+# Git Secret
 .gitsecret/keys/random_seed
 !*.secret
+
+# Encrypt files
 todoist/.todoist.config.json
