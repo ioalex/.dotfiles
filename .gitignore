@@ -9,3 +9,4 @@ Thumbs.db
 
 # Encrypt files
 todoist/.todoist.config.json
+public-key.gpg
