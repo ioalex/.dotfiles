@@ -2,3 +2,6 @@
 *.cache
 Thumbs.db
 *.log
+.gitsecret/keys/random_seed
+!*.secret
+todoist/.todoist.config.json

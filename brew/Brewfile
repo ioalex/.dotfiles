@@ -9,7 +9,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "idleberg/dbxcli"
 tap "jesseduffield/lazygit"
-tap "jhotmann/rename-cli"
 tap "nektos/tap"
 tap "rigellute/tap"
 tap "sachaos/todoist"
@@ -21,8 +20,6 @@ tap "universal-ctags/universal-ctags"
 brew "ack"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Compiler for writing next generation JavaScript
-brew "babel"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 3.2
@@ -33,12 +30,8 @@ brew "bat"
 brew "cask"
 # Control Google Chrome from the command-line
 brew "chrome-cli"
-# JavaScript optimizing compiler
-brew "closure-compiler"
 # Dependency Manager for PHP
 brew "composer"
-# Contentful command-line tools
-brew "contentful-cli"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Interpreted, interactive, object-oriented programming language
@@ -75,20 +68,14 @@ brew "grip"
 brew "htop"
 # Add GitHub support to git on the command-line
 brew "hub"
-# Configurable static site generator
-brew "hugo"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
-# Keep your Mac's application settings in sync
-brew "mackup"
 # Mac App Store command-line interface
 brew "mas"
 # Modern and intuitive terminal-based text editor
 brew "micro"
 # Collection of tools that nobody wrote when UNIX was young
 brew "moreutils"
-# CLI for MySQL with auto-completion and syntax highlighting
-brew "mycli"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
 # NCurses Disk Usage
@@ -105,6 +92,8 @@ brew "pipenv"
 brew "pv"
 # File browser
 brew "ranger"
+# Perl-powered file rename script with many helpful built-ins
+brew "rename"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
@@ -129,28 +118,18 @@ brew "thefuck"
 brew "tmux"
 # Manage complex tmux sessions easily
 brew "tmuxinator"
-# Lightweight BitTorrent client
-brew "transmission-cli"
 # CLI tool that moves files or folder to the trash
 brew "trash"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Language for application scale JavaScript development
-brew "typescript"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Command-line interface for VirusTotal
-brew "virustotal-cli"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
-# Bundler for JavaScript and friends
-brew "webpack"
 # Internet file retriever
 brew "wget"
 # Show the current WiFi network password
 brew "wifi-password"
-# Yet Another Dotfiles Manager
-brew "yadm"
 # JavaScript package manager
 brew "yarn"
 # General-purpose lossless data-compression library
@@ -173,8 +152,6 @@ brew "getantibody/tap/antibody"
 brew "idleberg/dbxcli/dbxcli"
 # A simple terminal UI for git commands, written in Go
 brew "jesseduffield/lazygit/lazygit"
-# A command line utility for renaming files
-brew "jhotmann/rename-cli/rename-cli"
 # Run GitHub Actions locally
 brew "nektos/tap/act"
 # A terminal user interface for Spotify

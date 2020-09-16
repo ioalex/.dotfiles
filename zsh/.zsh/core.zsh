@@ -96,7 +96,12 @@ else
     print "404: ~/.zsh/config/functions.zsh not found."
 fi
 
-# Aliases
+# Global Aliases
+for f in $HOME/.aliases/*; do
+   source $f
+done
+
+# ZSH-Specific Aliases
 if [ -f $HOME/.zsh/config/aliases.zsh ]; then
     source $HOME/.zsh/config/aliases.zsh
 else
