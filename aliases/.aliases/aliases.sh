@@ -11,7 +11,7 @@ alias ls=colorls
 alias lc="colorls -lA --sd"
 alias r=ranger
 alias rn=rename
-alias find=fd
+# alias find=fd
 alias c=clear
 
 alias ...="cd ../.."
@@ -81,3 +81,6 @@ cp -R $HOME/.config/nvim/lua/ $HOME/Dropbox/dotfiles/nvim/lua/
 cp -R $HOME/.config/nvim/plugins/ $HOME/Dropbox/dotfiles/nvim/plugins/
 cp -R $HOME/.config/nvim/themes/ $HOME/Dropbox/dotfiles/nvim/themes/
 echo 'Neovim configuration has been backed up to Dropbox.'"
+
+# Delete all .DS_Store in current directory including child directories
+alias dstore="find . -name ".DS_Store" -delete"

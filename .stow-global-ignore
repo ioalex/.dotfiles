@@ -1,7 +1,7 @@
-etc
 \.git
 \.github
-\..gitignore
+\.gitsecret
+\.gitignore
 
 README.*
 LICENSE

@@ -2,6 +2,9 @@
 	name = Alex
 	email = alex@alexhe.io
 
+[github]
+  user = ioalex
+
 [alias]
 	# Show the user email for the current repository.
 	whoami = config user.email
