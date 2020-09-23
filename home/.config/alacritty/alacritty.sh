@@ -19,7 +19,7 @@ else
   if ! command -v infocmp alacritty >/dev/null 2>&1; then
     echo "'infocmp alacritty' could not be executed properly."
     git clone https://github.com/alacritty/alacritty.git
-    cd "alacritty" || { echo "\u274c: Failure: ~/.config/alacritty/alacritty not found!"; exit 1; }
+    cd "alacritty" || { echo "\u274c: Failure: /alacritty not found!"; exit 1; }
 
     echo  "Installing Alacritty terminfo..."
     # Setup Terminfo
