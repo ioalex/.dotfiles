@@ -6,7 +6,7 @@ echo "Attempting Alacritty post-build tasks..."
 if ! command -v infocmp alacritty >/dev/null 2>&1; then
   echo "'infocmp alacritty' could not be executed properly."
   git clone https://github.com/alacritty/alacritty.git
-  cd "alacritty"
+  cd "alacritty" || { echo "Failure: ~/.config/alacritty/alacritty not found!"; exit 1; }
 
   echo  "Installing Alacritty terminfo..."
   # Setup Terminfo
