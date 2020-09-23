@@ -19,7 +19,7 @@ home/.config/micro/buffers/**
 home/.config/nano/syntax/
 
 # Tmux plugins
-home/.config/tmux/tmux
+home/.config/tmux/plugins
 
 # Ranger plugins
 home/.config/ranger/plugins
