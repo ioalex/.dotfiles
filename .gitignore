@@ -7,8 +7,16 @@ Thumbs.db
 home/.config/zsh/.zcompdump
 home/.config/zsh/.zshrc.zwc
 
-# Nano Syntax files
-home/.config/nano/syntax
+# Micro
+home/.config/micro/plug/**
+!home/.config/micro/plug/.gitkeep
+home/.config/micro/backups/**
+!home/.config/micro/backups/.gitkeep
+home/.config/micro/buffers/**
+!home/.config/micro/buffers/.gitkeep
+
+# Nano syntax files
+home/.config/nano/syntax/
 
 # Tmux plugins
 home/.config/tmux/tmux
