@@ -19,9 +19,13 @@ fetchSources(){
   wget -O /tmp/dotfiles.zip https://github.com/ioalex/.dotfiles/archive/master.zip
   # mkdir -p ~/Desktop/.dotfiles/
 
-  cd ~/Desktop/ || { echo "\u274c: Failure: ~/.dotfiles/ not found!"; exit 1; }
   unzip -o "/tmp/dotfiles.zip" -d ~/Desktop/.dotfiles
+  mv  -v ~/Desktop/.dotfiles/dotfiles-master/* ~/Desktop/.dotfiles
+  rm ~/Desktop/.dotfiles/dotfiles-master/
   rm /tmp/dotfiles.zip
+  cd ~/Desktop/.dotfiles || { echo "\u274c: Failure: ~/.dotfiles/ not found!"; exit 1; }
+
+  . scripts/setup.sh
 }
 
 fetchSources;
