@@ -23,4 +23,5 @@ else
   echo "\n"
   echo "\u2713: The following Nano syntax files have been installed to ~/.config/nano/syntax/ :"
   ls
+  cd "$DOTFILES" || { echo "\u274c: Failure: ~/.dotfiles not found!"; exit 1; }
 fi
