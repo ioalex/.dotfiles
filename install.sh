@@ -20,12 +20,23 @@ fetchSources(){
   # mkdir -p ~/Desktop/.dotfiles/
 
   unzip -o "/tmp/dotfiles.zip" -d ~/Desktop/.dotfiles
-  mv  -v ~/Desktop/.dotfiles/dotfiles-master/* ~/Desktop/.dotfiles
-  rm ~/Desktop/.dotfiles/dotfiles-master/
+  shopt -s dotglob
+  mv -v ~/Desktop/.dotfiles/dotfiles-master/* ~/Desktop/.dotfiles
+  rm ~/Desktop/.dotfiles/dotfiles-master
   rm /tmp/dotfiles.zip
   cd ~/Desktop/.dotfiles || { echo "\u274c: Failure: ~/.dotfiles/ not found!"; exit 1; }
 
+  echo "Would you like to begin setup (y/n)? "
+  read -r answer
+
+  if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo "\n"
+    echo "Executing setup script..."
   . scripts/setup.sh
+  else
+    echo "Dotfiles are downloaded and ready for setup at ~/.dotfiles ."
+    echo "You can run the setup command with: 'source scripts/setup.sh'"
+  fi
 }
 
 fetchSources;
