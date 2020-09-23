@@ -13,6 +13,9 @@ home/.config/nano/syntax
 # Tmux plugins
 home/.config/tmux/tmux
 
+# Ranger plugins
+home/.config/ranger/plugins
+
 # Git Secret
 .gitsecret/keys/random_seed
 !*.secret
