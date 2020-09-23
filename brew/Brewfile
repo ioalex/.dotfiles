@@ -26,6 +26,8 @@ brew "bash"
 brew "bash-completion"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Remove large files or passwords from Git history like git-filter-branch
+brew "bfg"
 # Emacs dependency management
 brew "cask"
 # Control Google Chrome from the command-line
@@ -46,6 +48,8 @@ brew "fdupes"
 brew "findutils"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Git extension for versioning large files
@@ -92,19 +96,23 @@ brew "pipenv"
 brew "pv"
 # File browser
 brew "ranger"
+# Reattach process (e.g., tmux) to background
+brew "reattach-to-user-namespace"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
 # Spotify daemon
 brew "spotifyd"
-# The cross-shell prompt for astronauts
+# Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
@@ -228,6 +236,7 @@ cask "quicklookase"
 cask "qutebrowser"
 cask "rectangle"
 cask "rocket"
+cask "sip"
 cask "skype"
 cask "slack"
 cask "sound-control"
@@ -235,6 +244,8 @@ cask "spotify"
 cask "suspicious-package"
 cask "timche-gmail-desktop"
 cask "tiny-player"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
 cask "visual-studio-code"
 cask "webpquicklook"
 cask "yt-music"

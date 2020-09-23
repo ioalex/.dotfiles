@@ -5,4 +5,5 @@
 
 README.*
 LICENSE
-.editorconfig
+
+.DS_Store

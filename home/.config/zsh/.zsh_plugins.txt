@@ -1,5 +1,5 @@
 # Static Loading
-# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+# antibody bundle < ~/.config/zsh/.zsh_plugins.txt > ~/.config/zsh/.zsh_plugins.sh
 
 # Powerlevel10k Theme
 romkatv/powerlevel10k

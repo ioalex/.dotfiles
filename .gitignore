@@ -3,8 +3,15 @@
 Thumbs.db
 *.log
 
+# ZSH Cache
+home/.config/zsh/.zcompdump
+home/.config/zsh/.zshrc.zwc
+
+# Nano Syntax files
+home/.config/nano/syntax
+
 # Tmux plugins
-tmux/tmux
+home/.config/tmux/tmux
 
 # Git Secret
 .gitsecret/keys/random_seed
