@@ -9,6 +9,7 @@
 
 # Post Build <github.com/alacritty/alacritty/blob/master/INSTALL.md>
 echo "Attempting Alacritty post-build tasks..."
+echo "\n"
 
 if ! command -v micro >/dev/null 2>&1; then
   echo "\u274c: The command 'micro' was not found on your system."
@@ -18,23 +19,28 @@ else
 
   if ! command -v infocmp alacritty >/dev/null 2>&1; then
     echo "'infocmp alacritty' could not be executed properly."
+    echo "\n"
     git clone https://github.com/alacritty/alacritty.git
     cd "alacritty" || { echo "\u274c: Failure: /alacritty not found!"; exit 1; }
 
+    echo "\n"
     echo  "Installing Alacritty terminfo..."
     # Setup Terminfo
     sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
 
   else
     echo  "\u2713: Alacritty terminfo found."
+    echo "\n"
   fi
 
   if ! command -v man alacritty >/dev/null 2>&1; then
     echo "Installing Alacritty manual page..."
+    echo "\n"
     # Install man page
     sudo mkdir -p /usr/local/share/man/man1
     gzip -c extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
 
+    echo "\n"
     echo "Cleaning up..."
     # Cleanup
     cd .. && rm -rf alacritty

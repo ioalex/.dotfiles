@@ -9,6 +9,7 @@
 
 # Installs Tmux Plugin Manager
 echo "Installing Tmux Plugin Manager..."
+echo "\n"
 
 if ! command -v tmux >/dev/null 2>&1; then
   echo "\u274c: The command 'tmux' was not found on your system."
@@ -16,6 +17,7 @@ if ! command -v tmux >/dev/null 2>&1; then
   echo "before attempting to install the plugin manager!"
 else
   git clone https://github.com/tmux-plugins/tpm "$XDG_CONFIG_HOME/tmux/plugins/tpm"
+  echo "\n"
   echo "\u2713: Tmux Plugin Manager has been installed."
   echo "Note: You can install plugins by specifying in tmux.conf"
 fi

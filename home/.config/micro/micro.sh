@@ -9,6 +9,7 @@
 
 # Installs Micro plugins
 echo "Installing plugins for Micro..."
+echo "\n"
 
 if ! command -v micro >/dev/null 2>&1; then
   echo "\u274c: The command 'micro' was not found on your system."
@@ -21,5 +22,6 @@ else
   micro -plugin install comment
   micro -plugin install quoter
   micro -plugin install editorconfig
+  echo "\n"
   echo "\u2713: Micro plugins have been installed."
 fi
