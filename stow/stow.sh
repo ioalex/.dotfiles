@@ -17,6 +17,7 @@ else
   stow home
 
   # Git Secrets
+  cd "$DOTFILES"|| { echo "\u274c: Failure: ~/.dotfiles not found!"; exit 1; }
   gpg --import public-key.gpg
   git secret reveal
   stow vscode --target="$HOME/Library/Application Support/Code/User/"

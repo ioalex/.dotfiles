@@ -7,36 +7,45 @@
 # Distributed under terms of the Unlicense license.
 #
 
-# Installs .dotfiles
+# .dotfiles Setup
 
-# Check for unzip before we continue
-if ! command -v unzip >/dev/null 2>&1; then
-  echo "\u274c: The 'unzip' command is required but was not found. Please install unzip first and then run this script again." >&2
-  exit 1
-fi
+echo "\n"
+echo "Welcome to the Dotfiles Install Wizard!"
+echo "This is a script that will attempt to install $(whoami)'s dotfiles"
+echo "\n"
 
-fetchSources(){
-  wget -O /tmp/dotfiles.zip https://github.com/ioalex/.dotfiles/archive/master.zip
-  # mkdir -p ~/Desktop/.dotfiles/
 
-  unzip -o "/tmp/dotfiles.zip" -d ~/Desktop/.dotfiles
-  shopt -s dotglob
-  mv -v ~/Desktop/.dotfiles/dotfiles-master/* ~/Desktop/.dotfiles
-  rm ~/Desktop/.dotfiles/dotfiles-master
-  rm /tmp/dotfiles.zip
-  cd ~/Desktop/.dotfiles || { echo "\u274c: Failure: ~/.dotfiles/ not found!"; exit 1; }
+echo "Executing Homebrew script..."
+. brew/brew.sh
+echo "\n"
 
-  echo "Would you like to begin setup (y/n)? "
-  read -r answer
+echo "Executing ZSH script..."
+. home/.config/zsh/zsh.sh
+echo "\n"
 
-  if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo "\n"
-    echo "Executing setup script..."
-  . scripts/setup.sh
-  else
-    echo "Dotfiles are downloaded and ready for setup at ~/.dotfiles ."
-    echo "You can run the setup command with: 'source scripts/setup.sh'"
-  fi
-}
+# Add a script that creates directories needed to symlink
+# Add a script that moves old configuration that will be replaced or is uneeded into a 'Recovered' folder
 
-fetchSources;
+echo "Executing GNU Stow Script"
+. stow/stow.sh
+echo "\n"
+
+echo "Executing Alacritty script..."
+. home/.config/alacritty/alacritty.sh
+echo "\n"
+
+echo "Executing Tmux script..."
+. home/.config/tmux/tmux.sh
+echo "\n"
+
+echo "Executing Ranger script..."
+. home/.config/ranger/ranger.sh
+echo "\n"
+
+echo "Executing Nano script..."
+. home/.config/nano/nano.sh
+echo "\n"
+
+echo "Executing Micro script..."
+. home/.config/micro/micro.sh
+echo "\n"
