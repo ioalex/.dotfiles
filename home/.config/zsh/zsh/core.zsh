@@ -84,18 +84,11 @@ if type brew &>/dev/null; then
 fi
 
 # Functions
-# functions+="${ZSH_FUNCTIONS}/precmd.zsh"
-
-# for file in $functions[@]; do
-#     if [[ -a "$file" ]]; then
-#         source "$file"
-#     fi
-# done
-
 for f in ${ZSH_FUNCTIONS}/*; do
    source $f
 done
 
+# Other completions
 fpath+="${ZSH_COMPLETIONS}"
 
 # Global Aliases

@@ -1,8 +1,7 @@
 # ZSH-Specific Aliases
 
 # Commonly Used
-
-alias reload="dbxcli put $DOTFILES/zsh/dot-zshrc dotfiles/.zshrc && src"
+alias reload="dbxcli put $DOTFILES/home/.config/zsh/.zshrc dotfiles/.zshrc && src"
 
 # Maintenance
 alias plugins="antibody update && antibody bundle < $ANTIBODY_PLUGINS_TXT > $ANTIBODY_PLUGINS"

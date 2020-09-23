@@ -4,7 +4,7 @@ Thumbs.db
 *.log
 
 # ZSH Cache
-home/.config/zsh/.zcompdump
+home/.config/zsh/.zcompdump*
 home/.config/zsh/.zshrc.zwc
 
 # Micro

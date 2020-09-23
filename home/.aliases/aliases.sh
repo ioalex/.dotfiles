@@ -11,12 +11,16 @@ alias o=open
 alias cat=bat
 alias rm=trash
 alias mkdir="mkdir -pv"
-alias ls=colorls
-alias lc="colorls -lA --sd"
+alias ls="colorls --color=auto"
+alias lc="colorls -lA --sd --color=auto"
+alias ld="colorls -lda --sd --color=auto"
+alias ll="colorls -lha --sd --color=auto"
 alias r=ranger
 alias rn=rename
 # alias find=fd
 alias c=clear
+
+alias histg="history | grep"
 
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -26,12 +30,14 @@ alias chrome=chrome-cli
 alias wifi=wifi-password
 alias dbx=dbxcli
 alias grep=rg --color=auto
+alias wget="wget -c"
+alias top="htop"
 # alias pip=pip3
 # alias python=python3
 alias wtf=apropos # list of commands apropos to the term you give it
 eval "$(thefuck --alias fuck)"
 eval "$(thefuck --alias FUCK)" # For Mondays!
-alias ll='last -1 $(whoami)'    # Prints the last login information - useful as .hushlogin completely suppresses the last login messages
+alias lastlogin='last -1 $(whoami)'    # Prints the last login information - useful as .hushlogin completely suppresses the last login messages
 
 # Editors
 alias vim=nvim
@@ -51,8 +57,8 @@ alias ta="tmux attach -t"
 alias tk="tmux kill-session -t"
 
 # Git
-# alias "git clone"="hub clone"
-alias g=git
+# Hub can be safely aliased as git
+alias git="hub"
 
 # NPM
 alias npmg="npm list -g --depth=0"
@@ -77,6 +83,3 @@ alias tmuxconf='nvim $HOME/.tmux.conf'
 alias dotfiles='cd $DOTFILES'
 alias projects='cd $PROJECTS'
 alias webdev='cd $WEBDEV'
-
-# Delete all .DS_Store in current directory including child directories
-alias dstore="find . -name '.DS_Store' -delete"

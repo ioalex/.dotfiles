@@ -34,7 +34,7 @@ mkdir -p "$ZDOTDIR"
 export ZSHCONFIG="$ZDOTDIR/zsh"
 export ZSH_MISC="$ZSHCONFIG/config/misc"
 export ZSH_FUNCTIONS="$ZSHCONFIG/config/functions"
-export ZSH_COMPLETIONS="$ZSHCONFIG/config/completions"
+export ZSH_COMPLETIONS="$ZSH_MISC/completions"
 export ZSHENV="$HOME/.zshenv"
 
 # Path to bash configuration
