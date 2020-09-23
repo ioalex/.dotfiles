@@ -11,6 +11,5 @@ tmux/tmux
 !*.secret
 
 # Encrypt files
-todoist/dot-todoist.config.json
 vscode/settings.json
 public-key.gpg
