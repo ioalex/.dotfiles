@@ -3,10 +3,14 @@
 Thumbs.db
 *.log
 
+# Tmux plugins
+tmux/tmux
+
 # Git Secret
 .gitsecret/keys/random_seed
 !*.secret
 
 # Encrypt files
 todoist/.todoist.config.json
+vscode/settings.json
 public-key.gpg

@@ -1,4 +1,6 @@
 # Homebrew
+# Set Homebrew Directory
+export HOMEBREW_FOLDER="$(brew --prefix)/share"
 
 # Prevent Homebrew from reporting
 export HOMEBREW_NO_ANALYTICS=1

@@ -1,5 +1,7 @@
 # Global Aliases
 
+alias svn="svn --config-dir "$XDG_CONFIG_HOME"/subversion"
+
 # Commonly Used
 alias please=sudo
 alias pls=sudo
@@ -22,7 +24,8 @@ alias chrome=chrome-cli
 alias wifi=wifi-password
 alias dbx=dbxcli
 alias grep=rg --color=auto
-alias pip=pip3
+# alias pip=pip3
+# alias python=python3
 alias wtf=apropos # list of commands apropos to the term you give it
 eval $(thefuck --alias fuck)
 eval $(thefuck --alias FUCK) # For Mondays!
@@ -69,6 +72,7 @@ alias nvimconfig="nvim $HOME/.config/nvim"
 alias tmuxconf="nvim $HOME/.tmux.conf"
 
 # Directory Shortcuts
+alias dotfiles="cd $DOTFILES"
 alias projects="cd $PROJECTS"
 alias webdev="cd $WEBDEV"
 

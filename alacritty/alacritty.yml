@@ -1,0 +1,96 @@
+# # Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Window Customization
+window:
+  dimensions:
+    columns: 140
+    lines: 38
+  padding:
+    x: 25
+    y: 25
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+  decorations: none
+scrolling:
+  history: 10000
+  multiplier: 3
+background_opacity: 0.8
+window.title: Alacritty
+window.dynamic_title: true
+
+# Font Customization
+font:
+  normal:
+    family: Hack Nerd Font
+    style: Regular
+  bold:
+    family: Hack Nerd Font
+    style: Bold
+  italic:
+    family: Hack Nerd Font
+    style: Italic
+  size: 18
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+  use_thin_strokes: true
+  debug:
+    persistent_logging: false
+draw_bold_text_with_bright_colors: true
+
+# Color Settings (Gruvbox)
+colors:
+  primary:
+    background: "#0f0f0f"
+    foreground: "#ebdbb2"
+
+  normal:
+    black: "#282828"
+    red: "#cc241d"
+    green: "#98971a"
+    yellow: "#d79921"
+    blue: "#458588"
+    magenta: "#b16286"
+    cyan: "#689d6a"
+    white: "#a89984"
+
+  bright:
+    black: "#928374"
+    red: "#fb4934"
+    green: "#b8bb26"
+    yellow: "#fabd2f"
+    blue: "#83a598"
+    magenta: "#d3869b"
+    cyan: "#8ec07c"
+    white: "#ebdbb2"
+
+  selection:
+    text: "0xffffff"
+    background: "0xdc3232"
+    white: "0xffffff"
+    semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+    # When set to `true`, selected text will be copied to the primary clipboard.
+    save_to_clipboard: true
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+key_bindings:
+  - { key: N, mods: Control, action: SpawnNewInstance }
+  # # Setup some amazing custom key bindings here - Best thing is you can setup key bindings
+  # # using Mac's 'command' to control your tmux.
+  # # A great reference: https://arslan.io/2018/02/05/gpu-accelerated-terminal-alacritty/#make-alacritty-feel-like-iterm2
+  # Use command + [ - to go to previous tmux window
+  - { key: LBracket, mods: Command, chars: "\x5c\x70" }
+  # Use command + ] - to go to previous tmux window
+  - { key: RBracket, mods: Command, chars: "\x5c\x6e" }
+  # ctrl-^ doesn't work in some terminals like alacritty
+  - { key: Key6, mods: Control, chars: "\x1e" }
+
+# Live config reload (changes require restart)
+live_config_reload: true

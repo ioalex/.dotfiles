@@ -6,17 +6,27 @@ if [ ! "$(command -v stow)" ]; then
 
   exit 1
 else
-  stow bash
+  stow alacritty --target="${XDG_CONFIG_HOME:-$HOME/.config}/alacritty"
+  stow bash --target="$BASHDIR"
   stow brew
   stow etc
   stow fzf
-  stow git
+  stow git --target="${XDG_CONFIG_HOME:-$HOME/.config}/git"
+  stow nano --target="${XDG_CONFIG_HOME:-$HOME/.config}/nano"
   stow p10k
-  stow ripgrep
-  stow tmux
+  stow ripgrep --target="$RIPGREP_DIR"
+  stow tmux --target="$TMUXDIR"
+  stow zsh --target="$ZDOTDIR"
+  stow wget --target="${XDG_CONFIG_HOME:-$HOME/.config}/wget"
+
+  # Git Secrets
   gpg --import public-key.gpg
   git secret reveal
   stow todoist
-  rm $HOME/.todoist.config.json.secret
-  stow zsh
+  stow vscode --target="$HOME/Library/Application Support/Code/User/"
+
+  # Remove unnecessary .secret symlinks
+  rm "$HOME/.todoist.config.json.secret"
+  rm "$HOME/Library/Application Support/Code/User/settings.json.secret"
+
 fi

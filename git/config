@@ -9,12 +9,15 @@
 	# Show the user email for the current repository.
 	whoami = config user.email
 
+[core]
+	excludesfile = ${XDG_CONFIG_HOME:-$HOME/.config}/git/ignore
+	attributesfile = ${XDG_CONFIG_HOME:-$HOME/.config}/git/attributes
+
+[color]
+	ui = auto
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
-[core]
-	excludesfile = /Users/alexhe/.gitignore
-	attributesfile = /Users/alexhe/.gitattributes

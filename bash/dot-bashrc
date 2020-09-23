@@ -1,6 +1,6 @@
-if [ -f $HOME/.bash/core.bash ]; then
-    source $HOME/.bash/core.bash
+if [ -f $BASHDIR/bash/core.bash ]; then
+    source $BASHDIR/bash/core.bash
 else
-    print "404: ~/.bash/core.bash not found."
-    print "Quick! Take a look at your ~/.dotfiles!!!"
+    echo "404: ~/.config/bash/bash/core.bash not found."
+    echo "Quick! Take a look at your ~/.dotfiles!!!"
 fi

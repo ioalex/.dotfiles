@@ -2,11 +2,11 @@
 
 # Commonly Used
 
-alias reload="dbxcli put $HOME/.zshrc dotfiles/.zshrc && src"
+alias reload="dbxcli put $DOTFILES/zsh/dot-zshrc dotfiles/.zshrc && src"
 
 # Maintenance
 alias plugins="antibody update && antibody bundle < $ANTIBODY_PLUGINS_TXT > $ANTIBODY_PLUGINS"
 
 # Configuration
-alias config="nvim $HOME/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias config="nvim $ZDOTDIR/.zshrc"
+alias ohmyzsh="nvim $HOME/.oh-my-zsh"

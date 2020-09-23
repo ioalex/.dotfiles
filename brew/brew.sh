@@ -27,20 +27,21 @@ if [ "$system_type" = "Darwin" ]; then
 
   # Add prompt here -> Would you like to install all packages or just the bare minimum?
 
-  echo -n "Would you like to install all packages (y/n)? "
-  read answer
+  # Removed -n echo flag, as they are undefined in POSIX sh
+  echo "Would you like to install all packages (y/n)? "
+  read -r answer
 
   if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo "Attempting to install Homebrew packages..."
       # Install brew packages through Brewfile
-      cp .dotfiles/brew/Brewfile $HOME/.Brewfile
+      cp ".dotfiles/brew/Brewfile" "$HOME/.Brewfile"
   if [ -f "$HOME/.Brewfile" ]; then
     # echo "Updating Homebrew bundle"
     # brew bundle is automatically installed when first run
     brew bundle --global --verbose
     echo "You can now use GNU Stow to symlink your dotfiles!"
-    rm $HOME/.Brewfile
-    rm $HOME/.Brewfile.lock.json
+    rm "$HOME/.Brewfile"
+    rm "$HOME/.Brewfile.lock.json"
   fi
 else
     echo "Homebrew has been installed without packages."
