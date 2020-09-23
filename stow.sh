@@ -1,7 +1,14 @@
 #!/bin/sh
+#
+# stow.sh
+# Author: Alex <alex@alexhe.io>
+# Year: 2020
+#
+# Distributed under terms of the Unlicense license.
+#
 
 if [ ! "$(command -v stow)" ]; then
-  echo "The stow command was not found. Please install it and try again." >&2
+  echo "\u274c: The stow command was not found. Please install it and try again." >&2
   echo "Try 'brew install stow'" >&2
 
   exit 1
