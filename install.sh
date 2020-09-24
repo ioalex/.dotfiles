@@ -26,8 +26,12 @@ echo "\n"
 # Add a script that creates directories needed to symlink
 # Add a script that moves old configuration that will be replaced or is uneeded into a 'Recovered' folder
 
+echo "Executing Ruby script..."
+. scripts/ruby.sh
+echo "\n"
+
 echo "Executing GNU Stow Script"
-. stow/stow.sh
+. scripts/stow.sh
 echo "\n"
 
 echo "Executing Alacritty script..."

@@ -15,6 +15,14 @@ export PATH="/usr/local/opt/python@3.8/bin:$PATH"
   # export PATH="/usr/local/opt/openldap/bin:$PATH"
   # export PATH="/usr/local/opt/openldap/sbin:$PATH"
 
+# Use Homebrew-installed curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
+#For compilers to find curl you may need to set:
+export LDFLAGS="-L/usr/local/opt/curl/lib"
+export CPPFLAGS="-I/usr/local/opt/curl/include"
+# For pkg-config to find curl you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
+
 # Use coreutils without "g" pefix
 # Coreutils is a package of updated basic command line tools
 PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
@@ -31,6 +39,12 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 # GNU-tar is another popular stream editor
 PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
+# FZF PATH
+if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
+fi
+
 # Add Ruby Version Manager to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH="$GEM_HOME/bin:$PATH"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

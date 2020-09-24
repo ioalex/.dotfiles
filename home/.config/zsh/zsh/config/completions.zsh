@@ -2,15 +2,15 @@
 # Enable Autocompletion
 autoload -Uz compinit;
 zstyle ':completion::complete:*' cache-path $ZSH_COMPLETE
-compinit -d $ZSH_DUMP
+# compinit -d $ZSH_DUMP
 
-# Speed up zsh compinit by only checking cache once a day
-typeset -i updated_at=$(date +"%j" -r $ZSH_COMPLETE 2>/dev/null || stat -f "%Sm" -t "%j" $ZSH_COMPLETE 2>/dev/null)
-if [ $(date +"%j") != $updated_at ]; then
-  compinit -i
-else
-  compinit -C -i
-fi
+() {
+  if [[ $# -gt 0 ]]; then
+    compinit
+  else
+    compinit -C
+  fi
+} ${ZSH_DUMP}/.zcompdump(N.mh+24)
 
 # Load complist module
 # Provides menu list for select completion results
