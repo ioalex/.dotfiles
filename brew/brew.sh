@@ -62,7 +62,7 @@ if [ "$system_type" = "Darwin" ]; then
   else
     echo "\n"
     echo "Homebrew will install the bare minimum for configuration..."
-    brew install stow git bash bash-completion htop micro nano neofetch ranger ripgrep starship tmux wget zsh
+    brew install stow git bash bash-completion gnupg htop micro nano neofetch ranger ripgrep starship tmux wget zsh
     brew cask install alacritty kitty visual-studio-code
     echo "\u2713: Your system is ready for dotfiles stow-ing!"
     echo "Feel free to run the script again to install missing packages!"

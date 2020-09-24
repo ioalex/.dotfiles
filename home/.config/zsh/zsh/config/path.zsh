@@ -9,11 +9,11 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 # Exports
-  export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
-  export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
-  export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
-  export PATH="/usr/local/opt/openldap/bin:$PATH"
-  export PATH="/usr/local/opt/openldap/sbin:$PATH"
+  # export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+  # export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+  # export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
+  # export PATH="/usr/local/opt/openldap/bin:$PATH"
+  # export PATH="/usr/local/opt/openldap/sbin:$PATH"
 
 # Use coreutils without "g" pefix
 # Coreutils is a package of updated basic command line tools
