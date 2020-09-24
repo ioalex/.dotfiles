@@ -63,17 +63,6 @@ echo "\n"
 
 
 ################################################################
-######### Create directories for Stow to be successful #########
-
-echo "Executing directories script..."
-. scripts/mkdir.sh
-echo "\n"
-
-################################################################
-
-
-
-################################################################
 ########### Uses Stow to create dot files symlinks #############
 
 echo "Executing GNU Stow Script"

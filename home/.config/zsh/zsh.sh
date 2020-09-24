@@ -51,4 +51,7 @@ else
   brew install zsh-autosuggestions zsh-completions zsh-navigation-tools zsh-syntax-highlighting
   echo "\n"
   echo "To install other plugins via Antibody, please run 'plugins'"
+
+  # shellcheck source=/dev/nulls
+  . "$HOME/.zshenv"
 fi

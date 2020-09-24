@@ -8,6 +8,7 @@ export NVM_DIR="$HOME/.nvm"
 mkdir -p "$NVM_DIR"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+mkdir -p "GOPATH"
 
 # Set ZSH_CACHE_DIR to the path where cache files should be created
 # This is needed to ensure the zsh_reload plugin works properly <github.com/ohmyzsh/ohmyzsh/blob/master/plugins/zsh_reload/zsh_reload.plugin.zsh>
