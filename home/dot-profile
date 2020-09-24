@@ -1,0 +1,20 @@
+# Generic configuration that applies to all shells
+
+typeset -a shell
+
+shell+=("$HOME/.config/shell/paths.sh")
+# shell+=("$HOME/.config/shell/variables.sh")
+shell+=("$HOME/.config/shell/common.sh")
+shell+=("$HOME/.config/shell/aliases.sh")
+
+for file in "${shell[@]}"; do
+    if [[ -a "$file" ]]; then
+      # shellcheck source=/dev/null
+      source "$file"
+    fi
+done
+
+# Global functions
+for f in "$HOME/.config/shell/functions"/*; do
+  source $f
+done

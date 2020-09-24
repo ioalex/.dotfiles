@@ -1,11 +1,14 @@
-typeset -U PATH path
+# shellcheck shell=sh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
-# Run for every Terminal window
-# Python 3.8 symlink
+# Set by MacPorts
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+# Use Homebrew-installed Python
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 # Exports
@@ -23,11 +26,11 @@ export CPPFLAGS="-I/usr/local/opt/curl/include"
 # For pkg-config to find curl you may need to set:
 export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
 
-# Use coreutils without "g" pefix
+# Use coreutils without "g" prefix
 # Coreutils is a package of updated basic command line tools
 PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 
-# Use findutils without "g" pefix
+# Use findutils without "g" prefix
 # Findutils is a package of basic directory searching utilities
 PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 
@@ -47,4 +50,5 @@ fi
 # Add Ruby Version Manager to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$GEM_HOME/bin:$PATH"
+# shellcheck source=/dev/null
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

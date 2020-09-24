@@ -12,9 +12,17 @@ source $HOMEBREW_FOLDER/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
 
 
 # Provides additional completions not available in Zsh yet
-    if type brew &>/dev/null; then
-     FPATH=$HOMEBREW_FOLDER/zsh-completions:$FPATH
+if type brew &>/dev/null; then
+  FPATH=$HOMEBREW_FOLDER/zsh-completions:$FPATH
 
-     autoload -Uz compinit
-     compinit
-    fi
+  autoload -Uz compinit
+  compinit
+fi
+
+# Enable Homebrew's completions <docs.brew.sh/Shell-Completion>
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi

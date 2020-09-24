@@ -1,35 +1,46 @@
-export HISTORY_DIR="$XDG_CACHE_HOME/history"
-mkdir -p "$HISTORY_DIR"
-export BASH_HISTORY="$HISTORY_DIR/.bash_history"
-
-# Set History file location
-export HISTFILE="$BASH_HISTORY"
-
+# Sane Defaults
 # shellcheck source=home/.config/bash/bash/config/sensible.bash
-if [ -f "$BASHDIR/bash/config/sensible.bash" ]; then
-   source "$BASHDIR/bash/config/sensible.bash"
+if [ -f "$BASH_DIR/bash/config/sensible.bash" ]; then
+   source "$BASH_DIR/bash/config/sensible.bash"
 fi
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# History Settings
+# shellcheck source=home/.config/bash/bash/config/history.bash
+if [ -f "$BASH_DIR/bash/config/history.bash" ]; then
+    source "$BASH_DIR/bash/config/history.bash"
+else
+    print "404: ~/.config/bash/config/history.bash not found."
+fi
 
-# shellcheck source=home/.fzf.bash
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Miscellaneous
+typeset -a misc
 
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+misc+=("${BASH_MISC}/brew.bash")
+misc+=("${BASH_MISC}/colorls.bash")
+misc+=("${BASH_MISC}/completion.bash")
+misc+=("${BASH_MISC}/fzf.bash")
+misc+=("${BASH_MISC}/nvm.bash")
 
-eval "$(starship init bash)"
-
-# Global Aliases
-for f in "$HOME/.aliases/"*; do
-# shellcheck source=home/.aliases/*
-   source "$f"
+for file in "${misc[@]}"; do
+  if [[ -a "$file" ]]; then
+    # shellcheck source=/dev/null
+    source "$file"
+  fi
 done
 
 # Bash-Specific Aliases
 # shellcheck source=home/.config/bash/bash/config/aliases.bash
-if [ -f "$BASHDIR/bash/config/aliases.bash" ]; then
-    source "$BASHDIR/bash/config/aliases.bash"
+if [ -f "$BASH_DIR/bash/config/aliases.bash" ]; then
+    source "$BASH_DIR/bash/config/aliases.bash"
 else
     print "404: ~/.config/bash/config/aliases.bash not found."
+fi
+
+# Prompt Settings
+# Starship must be added to the end of the file
+# shellcheck source=home/.config/bash/bash/config/prompt.bash
+if [ -f "$BASH_DIR/bash/config/prompt.bash" ]; then
+    source "$BASH_DIR/bash/config/prompt.bash"
+else
+    print "404: ~/.config/bash/config/prompt.bash not found."
 fi

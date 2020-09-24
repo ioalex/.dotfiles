@@ -6,8 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-if [ -f "$ZSHCONFIG/core.zsh" ]; then
-    source "$ZSHCONFIG/core.zsh"
+if [ -f "$ZSH_ZSH/core.zsh" ]; then
+    source "$ZSH_ZSH/core.zsh"
 else
     print "404: ~/.config/zsh/zsh/core.zsh not found."
     print "Quick! Take a look at your ~/.dotfiles!!!"
