@@ -8,25 +8,25 @@
         "revision": "5eed35274437b8c52be1e627d97ad7d46965f164"
       },
       "dart-lang/dart": {
-        "revision": "a9c9ef40527fdafeb6482090a4138e094716654b"
+        "revision": "6efc815669815449e9ce9a493463ae1c3ab97359"
       },
       "getantibody/tap": {
         "revision": "2decde79777dda7c1b6be8299a2477295d6da0d2"
       },
       "homebrew/bundle": {
-        "revision": "b84d4569eafe799c7c46c6c12c63215cb8095b6d"
+        "revision": "12702c2b9111a447bb89cd887771d20cffab4e63"
       },
       "homebrew/cask": {
-        "revision": "3e9530d963f36c843f8622a54f39055ce3497d15"
+        "revision": "bf969cfe505a71ed2d74ba16cc895442e07aaa5b"
       },
       "homebrew/cask-fonts": {
-        "revision": "db71e6a6bc22e8121d9df769671396207cd42a6e"
+        "revision": "bd966014eceec41a130707813f67f35f7c354149"
       },
       "homebrew/cask-versions": {
-        "revision": "8290294ea2c10d9bfa2a85a7cc5fafd86dfae7b6"
+        "revision": "624acd75643328fda64760a2e03aabf4bc45cd35"
       },
       "homebrew/core": {
-        "revision": "3ec516471fe463777df44b8444d73330e1481f54"
+        "revision": "7b0136058c62c82cd7544d4cae1e865f9a81aa72"
       },
       "idleberg/dbxcli": {
         "revision": "596531f7539a65916ae88fc29664b3a5c89e8a28"
@@ -215,6 +215,27 @@
             "high_sierra": {
               "url": "https://homebrew.bintray.com/bottles/coreutils-8.32.high_sierra.bottle.tar.gz",
               "sha256": "caa8cd8965727d0e805eccdc3e306cd0599720cdd0d5417cfcca03bead670663"
+            }
+          }
+        }
+      },
+      "curl": {
+        "version": "7.72.0",
+        "bottle": {
+          "cellar": ":any",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/curl-7.72.0.catalina.bottle.tar.gz",
+              "sha256": "cf0b3a7fa1d1608caad2c0a9c9a8336f354e5376c827205d65cd17768dea62d8"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/curl-7.72.0.mojave.bottle.tar.gz",
+              "sha256": "49f8082e1253de80b4178a30a3c1ea368d438139584ac4aa2b837e7568179404"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/curl-7.72.0.high_sierra.bottle.tar.gz",
+              "sha256": "38ec51342cdf8105a69780cede9c6c28164d112119791d318610893ddf77e314"
             }
           }
         }
@@ -747,6 +768,10 @@
             }
           }
         }
+      },
+      "nvm": {
+        "version": "0.35.3",
+        "bottle": false
       },
       "php": {
         "version": "7.4.10",
@@ -1962,7 +1987,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.5.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "3ec516471fe463777df44b8444d73330e1481f54",
+        "Homebrew/homebrew-core": "7b0136058c62c82cd7544d4cae1e865f9a81aa72",
         "CLT": "12.0.0.0.1.1599194153",
         "Xcode": "12.0",
         "macOS": "10.15.6"

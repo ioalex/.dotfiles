@@ -36,6 +36,8 @@ brew "chrome-cli"
 brew "composer"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 # CLI tool for quick access to files and directories
@@ -88,6 +90,8 @@ brew "ncdu"
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Manage multiple Node.js versions
+brew "nvm"
 # General-purpose scripting language
 brew "php"
 # Python dependency management tool
