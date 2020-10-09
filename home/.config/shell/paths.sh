@@ -47,6 +47,12 @@ if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
   export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
 fi
 
+path=( "${path[@]:#*Mono*}" )
+path=( "${path[@]:#*Xamarin*}" )
+path=( "${path[@]:#*dotnet*}" )
+path=( "${path[@]:#*X11*}" )
+
+
 # Add Ruby Version Manager to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$GEM_HOME/bin:$PATH"

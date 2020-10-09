@@ -13,6 +13,7 @@ export EDITOR="nvim"
 export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
+export XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:="/private/var/tmp"}
 
 # Shells
 # ZSH
@@ -48,8 +49,14 @@ export BASH_HISTORY="$HISTORY_DIR/.bash_history"
 # Applications
 
 # Node Version Manager
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="${XDG_DATA_HOME:="$HOME/.local/share"}/nvm"
 mkdir -p "$NVM_DIR"
+
+# Node
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+
+# NPM
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # Tmux
 export TMUXDIR=$XDG_CONFIG_HOME/tmux
@@ -72,3 +79,4 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 mkdir -p "GOPATH"
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg

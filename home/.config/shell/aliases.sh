@@ -38,6 +38,7 @@ alias wtf=apropos # list of commands apropos to the term you give it
 eval "$(thefuck --alias fuck)"
 eval "$(thefuck --alias FUCK)" # For Mondays!
 alias lastlogin='last -1 $(whoami)'    # Prints the last login information - useful as .hushlogin completely suppresses the last login messages
+alias gpg="gpg --homedir '$XDG_DATA_HOME'/gnupg"
 
 # Editors
 alias vim=nvim
@@ -62,6 +63,7 @@ alias git="hub"
 
 # NPM
 alias npmg="npm list -g --depth=0"
+alias npml="npm list --depth=0"
 
 # NVM
 # alias "nvm install latest"="nvm install node"
