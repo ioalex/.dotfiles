@@ -48,6 +48,8 @@ brew "fd"
 brew "fdupes"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
+# Command-line JSON processing tool
+brew "fx"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -76,6 +78,8 @@ brew "htop"
 brew "hub"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Mac App Store command-line interface
 brew "mas"
 # Modern and intuitive terminal-based text editor
