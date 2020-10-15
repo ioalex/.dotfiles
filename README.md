@@ -110,7 +110,7 @@ Distributed under the Unlicense License. See [`LICENSE`](https://github.com/ioal
 
 ## Contact
 
-Alex - [@alexheio](https://twitter.com/alexheio) - alex@alexhe.io
+Alex - [@ioalex_](https://twitter.com/ioalex_) - alex@alexhe.io
 
 Project Link: [https://github.com/ioalex/dotfiles](https://github.com/ioalex/dotfiles)
 
